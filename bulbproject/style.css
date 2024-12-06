@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.bulbcontain{
+    display: grid;
+    grid-template-rows: 250px 50px;
+    grid-template-columns:  1fr;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    padding: auto;
+}
+.bulb_on{
+    display: none;
+}
+.bulb_off{
+    display: block;
+}
+.boff{
+    display: none;
+}
+.bon{
+    display: block;
+    
+}
+img{
+    margin: auto;
+}
+button{
+    background-color: rgba(179, 216, 226, 0.381);
+    border-radius: 1rem;
+}

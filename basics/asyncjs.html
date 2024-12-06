@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <p></p>
+</body>
+<script>
+    const start = document.querySelector("#start");
+    const stop = document.querySelector("#stop");
+    const para = document.querySelector("p");
+    // const timeOut = setTimeout(() => {
+    //     const d = new Date();
+    //     para.innerHTML=`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+
+    // }, 3000);
+    // stop.addEventListener('click',()=>{
+    //     clearTimeout(timeOut);
+    // })
+    let interval;
+    const startit=function (){
+        const startTime=()=>{ 
+        const d = new Date();
+        para.innerHTML=`${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+      }  
+        if (!interval) {
+            interval = setInterval(startTime, 1000);
+        }
+     
+    }
+
+    const stopTime=function (){
+        clearInterval(interval);
+        interval=null;
+    }
+    start.addEventListener('click',startit);
+    stop.addEventListener('click',stopTime);
+</script>
+
+</html>

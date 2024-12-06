@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul class="parent">
+            <li class="day">JS</li>
+            <li class="day">Django</li>
+            <li class="day">Notepad</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const lang=document.createTextNode("language");
+    const parent=document.querySelector(".parent");
+    // parents.firstChildElement.appendChild(lang);
+    // document.body.appendChild(div);
+    const li=document.createElement('li');
+    li.appendChild(lang);
+    parent.appendChild(li);
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h2 class="counterDisplay">Counter=0</h2>
+    <button onclick="add()" id="add">Add</button>
+    <button onclick="decrease()">Decrease</button>
+    
+    
+</body>
+<script>
+    let count=0;
+    console.log("count=",count);//0
+    addCount(count+1);//1,c=1
+    console.log("count=",count);//1
+    
+    addCount(count+1);//c=1+1=2
+    console.log("count=",count);
+    function addCount(c){
+        count=c;
+        console.log(count);
+    }
+    let counter=0;
+   
+    const add=()=>{
+        counter++;
+        const count=document.querySelector('.counterDisplay');
+    count.innerHTML=`${counter}`;//needs to change the content everytime or everywhere we need by taking refrence of tag in html but by using react,it is easy as we can change variable everywhere at once...
+    }
+    const decrease=()=>{
+        counter--;
+        const count=document.querySelector('.counterDisplay');
+    count.innerHTML=`${counter}`;
+    }
+    
+</script>
+</html>
